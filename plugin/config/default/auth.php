@@ -1,6 +1,17 @@
 <?php
 
-	return Affinity\Config::create(['auth'], [
+	return Affinity\Config::create(['providers', 'auth'], [
+		'@providers' => [
+			//
+			// The provider mapping lists concrete class providers for given interfaces, the
+			// interface is the key, while the class is the value.
+			//
+
+			'mapping' => [
+				'iMarc\Auth\EntityInterface' => 'Inkwell\Auth\AnonymousUser'
+			]
+		],
+
 		'@auth' => [
 
 				//
@@ -33,7 +44,9 @@
 				//
 
 				'permissions' => [
+					'Anonymous' => [
 
+					]
 				],
 
 				//

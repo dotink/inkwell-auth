@@ -37,6 +37,10 @@
 					$manager->add($acl);
 				}
 
-				$broker->share($app['auth.manager'] = $manager);
+				$broker->share($app['auth'] = $manager);
 			};
+
+			$broker->prepare('Inkwell\Auth\ConsumerInterface', function($consumer, $broker) {
+					$broker->execute([$consumer, 'setAuthManager']);
+			});
 	});
