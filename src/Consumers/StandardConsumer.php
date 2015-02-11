@@ -2,7 +2,7 @@
 {
 	use iMarc\Auth\Manager;
 
-	trait ContainerConsumer
+	trait StandardConsumer
 	{
 		/**
 		 * The authorization manager
