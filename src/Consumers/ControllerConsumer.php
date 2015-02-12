@@ -21,7 +21,7 @@
 				}
 			}
 
-			$this->response->setStatus(HTTP\NOT_AUTHORIZED);
+			$this->response->setStatus(HTTP\FORBIDDEN);
 			$this->router->demit(NULL);
 		}
 
