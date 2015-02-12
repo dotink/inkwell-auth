@@ -15,10 +15,8 @@
 		 */
 		protected function requireAuth($action, $target)
 		{
-			if (!$this['auth']->is('Anonymous')) {
-				if ($this['auth']->can($action, $target)) {
-					return TRUE;
-				}
+			if (!$this['auth']->is('Anonymous') && $this['auth']->can($action, $target)) {
+				return TRUE;
 			}
 
 			$this->response->setStatus(HTTP\FORBIDDEN);
