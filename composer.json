@@ -19,7 +19,8 @@
 	],
 	"require": {
 		"php": ">=5.4.0",
-		"imarc/auth": "dev-master"
+		"imarc/auth": "dev-master",
+		"dotink/inkwell-events": "dev-master"
 	},
 	"autoload": {
 		"classmap": ["src/"]
