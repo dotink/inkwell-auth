@@ -19,7 +19,6 @@
 	],
 	"require": {
 		"php": ">=5.4.0",
-		"imarc/auth": "dev-master",
 		"dotink/inkwell-events": "^1.0.0",
 		"imarc/auth": "^1.0.0"
 	},
